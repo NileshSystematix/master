@@ -58,18 +58,3 @@ $scope.watchVideo = function() {
      }
   })
 
-// Final Check List Controller
-.controller('checkListController', function($scope, $ionicHistory, $location) {
-     //  // $scope.checkList = function () {
-     //  //    $location.path('/checkList')
-     // }
-  });
-
-
-
-
-
-
- 
-
-
