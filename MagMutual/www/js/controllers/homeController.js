@@ -11,20 +11,25 @@ angular.module('starter.controllers', ['ionic'])
 
 //Video screen redirection
 $scope.watchVideo = function() {
-	$location.path('/video')
+  $location.path('/video')
   };
 
   // See Check List screen redirection 
   $scope.seeCheckList = function() {
-  	
-	$location.path('/seeCheckList')
+    
+  $location.path('/seeCheckList')
   };
 
   // Home button funtionality
   $scope.homePage = function() {
-  	$location.path('/home')
+    $location.path('/home')
   };
 
+  // Social Shring redirection functionality
+  $scope.socialSharing = function() {
+
+        $location.path('/socialSharing')
+      }
 })
 
 //See Check List screen controller
@@ -50,11 +55,62 @@ $scope.watchVideo = function() {
      }
   })
 
+// Final Check List Controller
+.controller('finalCheckController', function($scope, $ionicHistory, $location) {
+     
+     // Video screen redirection
+     $scope.watchVideo = function() {
+        $location.path('/video')
+      }
+     
+
+  })
+
+
 //Conclusion screen controller
 .controller('conclusionController', function($scope, $ionicHistory, $location) {
       // Final Check List redirection
-      $scope.checkList = function () {
-         $location.path('/checkList')
+      $scope.checkoff = function () {
+                  
+          $location.path('/checkOff')
+    
      }
   })
+
+
+//Social Sharing screen controller
+.controller('socialSharingController', function($scope, $ionicHistory, $location, $cordovaSocialSharing) {
+    
+   // Twitter social sharing functionality 
+   $scope.shareViaTwitter = function(message, image, link) {
+        $cordovaSocialSharing.canShareVia("twitter", message, image, link).then(function(result) {
+                      $cordovaSocialSharing.shareViaTwitter(message, image, link);
+
+        }, function(error) {
+            alert("Sharing on Twitter has been failed.");
+        });
+    }   
+     
+     // Facebook social sharing functionality
+      $scope.shareViaFacebook = function(message, image, link) {
+        $cordovaSocialSharing.canShareVia("facebook", message, image, link).then(function(result) {
+            $cordovaSocialSharing.shareViaFacebook(message, image, link);
+        }, function(error) {
+            alert("Sharing on Facebook has been failed.");
+        });
+    } 
+    
+    // Cancel button functionality of socail sharing screen which will redirect to home screen
+    $scope.cancel = function () {
+                  
+          $location.path('/home')
+    
+     }
+   })
+
+
+
+
+ 
+
 
