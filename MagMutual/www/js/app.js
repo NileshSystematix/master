@@ -20,6 +20,9 @@ app.run(function($ionicPlatform) {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+    if (navigator.splashscreen) {
+     navigator.splashscreen.hide();
+  } 
   });
 });
 

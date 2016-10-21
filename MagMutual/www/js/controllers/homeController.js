@@ -82,30 +82,46 @@ $scope.watchVideo = function() {
 .controller('socialSharingController', function($scope, $ionicHistory, $location, $cordovaSocialSharing) {
     
    // Twitter social sharing functionality 
-   $scope.shareViaTwitter = function(message, image, link) {
-        $cordovaSocialSharing.canShareVia("twitter", message, image, link).then(function(result) {
-                      $cordovaSocialSharing.shareViaTwitter(message, image, link);
-
+   $scope.shareViaTwitter = function() {
+     
+     window.plugins.spinnerDialog.show("Loading...","Please wait...", true); 
+       
+     var message ="MagMutual";
+        $cordovaSocialSharing.canShareVia("twitter", "message", null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf").then(function(result) {
+        $cordovaSocialSharing.shareViaTwitter(message, null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf");
+        $scope.delayLoader();
         }, function(error) {
+          window.plugins.spinnerDialog.hide();
             alert("Sharing on Twitter has been failed.");
         });
     }   
      
      // Facebook social sharing functionality
-      $scope.shareViaFacebook = function(message, image, link) {
-        $cordovaSocialSharing.canShareVia("facebook", message, image, link).then(function(result) {
-            $cordovaSocialSharing.shareViaFacebook(message, image, link);
+       $scope.shareViaFacebook = function() {
+         var message ="MagMutual";
+         window.plugins.spinnerDialog.show("Loading...","Please wait...", true); 
+           $scope.delayLoader();
+        $cordovaSocialSharing.canShareVia("facebook", "message", null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf").then(function(result) {
+            $cordovaSocialSharing.shareViaFacebook(message, null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf");
+            $scope.delayLoader();
         }, function(error) {
+          window.plugins.spinnerDialog.hide();
             alert("Sharing on Facebook has been failed.");
         });
     } 
     
-    // Cancel button functionality of socail sharing screen which will redirect to home screen
+    // Cancel button functionality of social sharing screen which will redirect to home screen
     $scope.cancel = function () {
-                  
           $location.path('/home')
-    
      }
+    
+    $scope.delayLoader = function()
+    {
+      setTimeout(function(){
+      window.plugins.spinnerDialog.hide();
+      
+    }, 5000);
+    }
    })
 
 
