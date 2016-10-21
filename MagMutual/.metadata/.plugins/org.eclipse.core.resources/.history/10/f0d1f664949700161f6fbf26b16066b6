@@ -1,0 +1,55 @@
+
+<!--  Header of social sharing screen -->
+<ion-header-bar class="bar-header playstore-header" align-title="center">
+        
+        
+        <img class="title" src="./img/header-blue.png">
+        
+     <div class="buttons">
+          <button class="button icon ion-home" style="background-color:#F68B1F;color: white;" ui-sref="home"></button>
+        </div>
+</ion-header-bar>
+      <!-- end of ionic header bar -->
+
+
+   <!-- Content of Social sharing screen -->
+  <ion-content>
+    <br>
+    <div align="center">
+    <h1 class="heading-style">Share Check List</h1>
+    </div>
+    <br>
+    <br>
+    <div align="center">
+    <ul class="list">
+       <li id="displayLabel">
+      
+         <!-- Twiiter button for social sharing -->
+         <button class="button button-block button-calm item-icon-left" ng-click="shareViaTwitter('some message', null, 'http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf')">
+            <i class="icon ion-social-twitter"></i>
+              twitter
+       </button>
+       </li>
+ 
+      <br>
+      <li id="displayLabel">
+        <!-- Facebook button for social sharing --> 
+        <button class="button button-block button-calm item-icon-left" ng-click="shareViaFacebook()">
+             <i class="icon ion-social-facebook"></i>
+              facebook
+      </button>
+      </li>
+
+    </ul> 
+    
+ 			</div>
+	</div>
+  </ion-content>
+
+  <!-- Cancel button of social sharing screen -->
+  <ion-footer-bar align-title="center" class="bar-calm">
+   
+    <h1 class="title" ng-click="cancel();">Cancel</h1>
+    
+</ion-footer-bar>
+     
