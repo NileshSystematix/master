@@ -994,7 +994,7 @@ ion-infinite-scroll .icon{color:#666666;font-size:30px;color:#666666;}
 ion-infinite-scroll:not(.active) .spinner,ion-infinite-scroll:not(.active) .icon:before{display:none;}
 .overflow-scroll{overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar;top:0;right:0;bottom:0;left:0;position:absolute;}
 .overflow-scroll.pane{overflow-x:hidden;overflow-y:scroll;}
-.overflow-scroll .scroll{position:static;height:100%;-webkit-transform:translate3d(0,0,0);}
+.overflow-scroll .scroll{position:static;height:20%;-webkit-transform:translate3d(0,0,0);}
 
 /* If you change these, change platform.scss as well */
 .has-header{top:60px;}
@@ -1143,17 +1143,12 @@ background-size:0;}
 .bar .button.button-clear .icon:before,.bar .button.button-clear.icon:before,.bar .button.button-clear.icon-left:before,.bar .button.button-clear.icon-right:before,.bar button.button-clear .icon:before,.bar button.button-clear.icon:before,.bar button.button-clear.icon-left:before,.bar button.button-clear.icon-right:before{font-size:32px;line-height:32px;}
 .bar .button.back-button,.bar button.back-button{display:block;margin-right:5px;padding:0;white-space:nowrap;font-weight:400;}
 .bar .button.back-button.active,.bar .button.back-button.activated,.bar button.back-button.active,.bar button.back-button.activated{opacity:0.2;}
-.bar .button-bar > .button,.bar .buttons > .button{ border-radius: 50%;
-    height: 31px !important;
-    line-height: 17px !important;
-    min-height: 1px;
-    padding: 0;
-    text-align: center;
-    width: 31px;}
-.bar .button-bar > .button:before,.bar .buttons > .button:before{ font-size: 20px;
-    line-height: 25px;
-    padding-left: 2px;
-    padding-right: 2px;}
+.bar .button-bar > .button,.bar .buttons > .button{border-radius: 50%;height: 31px !important;
+line-height: 17px !important;min-height: 1px;padding: 0;text-align: center;width: 31px;}
+.bar .buttons > .button.ion-chevron-left{padding:0 3px 0 0;}
+.bar .buttons > .button.ion-home{padding-bottom:2px;}
+.bar .button-bar > .button:before,.bar .buttons > .button:before{ font-size: 20px;line-height: 25px;
+padding-left: 2px;padding-right: 2px;}
 .bar .button-bar + .button,.bar .button + .button-bar{margin-left:5px;}
 .bar .buttons,.bar .buttons.primary-buttons,.bar .buttons.secondary-buttons{display:inherit;}
 .bar .buttons span{display:inline-block;}
@@ -1215,7 +1210,7 @@ background-size:0;}
 .tabs-top .bar-header{border-bottom-width:0px;background-image:none;}
 .bar-footer{bottom:0;border-top-width:1px;border-bottom-width:0;background-position:top;height:44px;min-height:44px;}
 .bar-footer.item-input-inset{position:absolute;}
-.bar-footer .title{height:43px;line-height:44px;}
+.bar-footer .title{height:43px;line-height:38px;}
 .bar-tabs{padding:0;}
 .bar-subheader{top:44px;height:44px;}
 .bar-subheader .title{height:43px;line-height:44px;}

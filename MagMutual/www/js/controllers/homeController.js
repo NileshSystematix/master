@@ -11,8 +11,28 @@ angular.module('starter.controllers', ['ionic'])
 
 //Video screen redirection
 $scope.watchVideo = function() {
-  $location.path('/video')
+   $scope.currentPlatform = ionic.Platform.platform();
+ if($scope.currentPlatform == "android"){
+       $scope.currentPlatformVersion = ionic.Platform.version();
+       if($scope.currentPlatformVersion <= 5){
+         window.plugins.spinnerDialog.show("Loading...","Please wait...", true); 
+         $scope.delayLoader();
+               $location.path('/video')
+       }
+       else{
+         $location.path('/video2')
+       }
+ }
+ 
   };
+  
+  $scope.delayLoader = function()
+  { 
+    setTimeout(function(){
+    window.plugins.spinnerDialog.hide();
+    
+  }, 8000);
+  }
 
   // See Check List screen redirection 
   $scope.seeCheckList = function() {
@@ -59,13 +79,50 @@ $scope.watchVideo = function() {
 .controller('finalCheckController', function($scope, $ionicHistory, $location) {
      
      // Video screen redirection
-     $scope.watchVideo = function() {
-        $location.path('/video')
-      }
+  //Video screen redirection
+  $scope.watchVideo = function() {
+     $scope.currentPlatform = ionic.Platform.platform();
+   if($scope.currentPlatform == "android"){
+         $scope.currentPlatformVersion = ionic.Platform.version();
+         if($scope.currentPlatformVersion <= 5){
+           window.plugins.spinnerDialog.show("Loading...","Please wait...", true); 
+           $scope.delayLoader();
+                 $location.path('/video')
+         }
+         else{
+           $location.path('/video2')
+         }
+   }
+   
+    };
+    
+    $scope.delayLoader = function()
+    { 
+      setTimeout(function(){
+      window.plugins.spinnerDialog.hide();
+      
+    }, 8000);
+    }
      
 
   })
 
+.controller('videoController', function($scope, $ionicHistory, $location) {
+
+  // onSuccess Callback
+// This method accepts a JSON object, which contains the
+// boolean response
+//
+
+
+window.cordova.plugins.FileOpener.openFile("http://www.website.com/file.pdf", onSuccess, onError);
+
+
+
+
+
+
+})
 
 //Conclusion screen controller
 .controller('conclusionController', function($scope, $ionicHistory, $location) {
@@ -88,11 +145,12 @@ $scope.watchVideo = function() {
        
      var message ="MagMutual";
         $cordovaSocialSharing.canShareVia("twitter", "message", null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf").then(function(result) {
-        $cordovaSocialSharing.shareViaTwitter(message, null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf");
+        $cordovaSocialSharing.shareViaTwitter(message, null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf")
         $scope.delayLoader();
+        
         }, function(error) {
           window.plugins.spinnerDialog.hide();
-            alert("Sharing on Twitter has been failed.");
+            alert("Before sharing on Twitter, kindly install the app or check internet connection in your device.");
         });
     }   
      
@@ -104,9 +162,10 @@ $scope.watchVideo = function() {
         $cordovaSocialSharing.canShareVia("facebook", "message", null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf").then(function(result) {
             $cordovaSocialSharing.shareViaFacebook(message, null, "http://www.hashtagmed.com/magmutual/ShoulderDystocia.pdf");
             $scope.delayLoader();
+             
         }, function(error) {
           window.plugins.spinnerDialog.hide();
-            alert("Sharing on Facebook has been failed.");
+            alert("Before sharing on Facebook, kindly install the app or check internet connection in your device.");
         });
     } 
     
