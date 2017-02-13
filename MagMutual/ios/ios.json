@@ -3,6 +3,7 @@
         "installed": [],
         "uninstalled": []
     },
+    
     "config_munge": {
         "files": {
             "config.xml": {
