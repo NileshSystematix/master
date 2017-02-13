@@ -50,23 +50,23 @@
 					 </div>
 						
 						<div class="form-group">
-							<label class="col-xs-4"> <span>Company:</span></label> 
+							<label class="col-xs-4"> <span>Hospital:</span></label>
 							<div class="col-xs-8"><input type="text"
-							name="company" placeholder="Company Name"
-							ng-model="register.company_name" ng-minlength="2"
+							name="hospital" placeholder="Hospital Name"
+							ng-model="register.hospital_name" ng-minlength="2"
 							ng-pattern="/^[a-zA-Z0-9 _]*$/" required>
 
-							<div ng-show="registerForm.company.$error.required && submitted">
-							<div style="color: red" class="text-left">Company Name is required</div>
+							<div ng-show="registerForm.hospital.$error.required && submitted">
+							<div style="color: red" class="text-left">Hospital Name is required</div>
 						</div>
 
-						<div ng-show="registerForm.company.$error.pattern && submitted">
-							<div style="color: red" class="text-left">Please enter valid Company Name</div>
+						<div ng-show="registerForm.hospital.$error.pattern && submitted">
+							<div style="color: red" class="text-left">Please enter valid Hospital Name</div>
 						</div>
 
 						<div
-							ng-show="!registerForm.company.$error.required && !registerForm.company.$error.pattern && registerForm.company.$error.minlength && registerForm.company.$dirty && submitted">
-							<div style="color: red" class="text-left">Company Name must contain at least 2 characters</div>
+							ng-show="!registerForm.hospital.$error.required && !registerForm.hospital.$error.pattern && registerForm.hospital.$error.minlength && registerForm.hospital.$dirty && submitted">
+							<div style="color: red" class="text-left">Hospital Name must contain at least 2 characters</div>
 						</div>
 							</div>
 						</div>

@@ -2733,8 +2733,10 @@ visibility:visible;}
 	.d-checklist h3{float:left;font-size:34px;font-weight:300;margin:10px 0 20px;padding:0;}
 	.green-section,.graybx{background:none repeat scroll 0 0 #00A89D;padding:45px 0;font-size:30px;margin-bottom:14px;-webkit-box-shadow:2px 2px 1px 0px rgba(50,50,50,0.75);-moz-box-shadow:2px 2px 1px 0px rgba(50,50,50,0.75);box-shadow:2px 2px 1px 0px rgba(50,50,50,0.75);}
 	.green-section a,.green-section a:hover{color:#bbbdbf;}
-	.graybx a,.graybx a:hover{color:#00a89d;}
+	.graybx a, .graybx a:hover{color: #000; font-weight: 600;}
 	.graybx{background:#bbbdbf;color:#00a89d;}
+	.graybx1 a, .graybx1 a:hover{color: #000; font-weight: 600;}
+    .graybx1{background: #00a89d; color: #000;}
 	.list-apply{padding-left:28px;}
 	.ionic_ratings{font-size:40px;}
 	.form-group.l-field,#l-p-section{margin-left:19px!important;}

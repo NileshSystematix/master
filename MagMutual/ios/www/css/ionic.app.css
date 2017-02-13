@@ -2730,8 +2730,10 @@ form .form-group.other-maneuvers label span{display: block; padding-left: 25px;}
 -moz-box-shadow:    2px 2px 1px 0px rgba(50, 50, 50, 0.75);
 box-shadow:         2px 2px 1px 0px rgba(50, 50, 50, 0.75);}
 .green-section a, .green-section a:hover{color:#bbbdbf;}
-.graybx a, .graybx a:hover{color: #00a89d;}
+.graybx a, .graybx a:hover{color: #000; font-weight: 600;}
 .graybx{background: #bbbdbf; color: #00a89d;}
+.graybx1 a, .graybx1 a:hover{color: #000; font-weight: 600;}
+.graybx1{background: #00a89d; color: #000;}
 .list-apply{ padding-left:28px;}
 .ionic_ratings{font-size: 40px;}
 .form-group.l-field, #l-p-section{margin-left: 19px !important;}

@@ -212,9 +212,9 @@ function DoSomething() {
     	 $scope.post={};
     	 
     	 $scope.order={};
-    	 $scope.order.size1="1";
-    	 $scope.order.size2="1";
-    	 $scope.order.size3="1";
+    	 $scope.order.size1="0";
+    	 $scope.order.size2="0";
+    	 $scope.order.size3="0";
     	 
     	
     	 $scope.setValue=function(data){
@@ -262,7 +262,7 @@ function DoSomething() {
 		
      window.localStorage.setItem( 'UserName', $scope.register.user_name);
    
-    window.localStorage.setItem( 'CompanyName', $scope.register.company_name);
+    window.localStorage.setItem( 'HospitalName', $scope.register.hospital_name);
 
     window.localStorage.setItem( 'Address1', $scope.register.address);
 
@@ -336,7 +336,7 @@ $scope.home=function(){
     	  $scope.fullName=window.localStorage.getItem('UserName');
     	
 //    	  alert($scope.fullName);
-    	  $scope.companyName=window.localStorage.getItem('CompanyName');
+    	  $scope.hospitalName=window.localStorage.getItem('HospitalName');
     	  $scope.address1=window.localStorage.getItem('Address1');
     	  $scope.address2=window.localStorage.getItem('Address2');
     	  $scope.city=window.localStorage.getItem('City');
@@ -418,7 +418,7 @@ $scope.home=function(){
      		}
     			  
                
-    			  $scope.html="<div>Name: "+$scope.fullName+"<br>Company: "+$scope.companyName+"<br>Address1: "+$scope.address1+"<br>Address2:"+$scope.address2+"<br>City: "+$scope.city+"<br>State: "+$scope.state+"<br> ZIP: "+$scope.zip+"<br> Phone: "+$scope.phone+"<br><br> Quantity of  8\" X 11\" Poster: "+ $scope.ordSize1+"<br><br> Quantity of  11\" X 17\" Poster:  "+ $scope.ordSize2+"<br><br> Quantity of  18\" X 24\" Poster: " +$scope.ordSize3+"<br><br>Rated: "+ $scope.rating +"<br>Comment: "+$scope.CommentsSuggestion+" </div>";
+    			  $scope.html="<div>Name: "+$scope.fullName+"<br>Hospital Name: "+$scope.hospitalName+"<br>Address1: "+$scope.address1+"<br>Address2:"+$scope.address2+"<br>City: "+$scope.city+"<br>State: "+$scope.state+"<br> ZIP: "+$scope.zip+"<br> Phone: "+$scope.phone+"<br><br> Quantity of  8\" X 11\" Poster: "+ $scope.ordSize1+"<br><br> Quantity of  11\" X 17\" Poster:  "+ $scope.ordSize2+"<br><br> Quantity of  18\" X 24\" Poster: " +$scope.ordSize3+"<br><br>Rated: "+ $scope.rating +"<br>Comment: "+$scope.CommentsSuggestion+" </div>";
        		  
         	  }
         	  
@@ -427,7 +427,7 @@ $scope.home=function(){
         		 
 //        		  
 
-            	  $scope.html="<div>Name: <br>Company: <br>Address1: <br>Address2:<br>City:<br>State: <br> ZIP:<br> Phone: <br><br>  Quantity of  8\" X 11\" Poster: <br><br> Quantity of  8\" X 11\" Poster: "+$scope.ordSize1+"<br><br> Quantity of  11\" X 17\" Poster:  "+$scope.ordSize2+"<br><br> Quantity of 18\" X 24\"  Poster  "+$scope.ordSize3+"<br><br>Rated: "+ window.localStorage.getItem('rating') +"<br>Comment: "+$scope.CommentsSuggestion+" </div>";
+            	  $scope.html="<div>Name: <br>Hospital Name: <br>Address1: <br>Address2:<br>City:<br>State: <br> ZIP:<br> Phone: <br><br>  Quantity of  8\" X 11\" Poster: <br><br> Quantity of  8\" X 11\" Poster: "+$scope.ordSize1+"<br><br> Quantity of  11\" X 17\" Poster:  "+$scope.ordSize2+"<br><br> Quantity of 18\" X 24\"  Poster  "+$scope.ordSize3+"<br><br>Rated: "+ window.localStorage.getItem('rating') +"<br>Comment: "+$scope.CommentsSuggestion+" </div>";
 
         	  }
     		  
@@ -441,7 +441,7 @@ $scope.home=function(){
     		            }, 
     		            "Magmutual Poster Order", // Subject
     		           $scope.html,                      // Body
-    		            ["maginfo@magmutual.com"],    // To
+    		            ["nrobinson@magmutual.com"],    // To
     		            null,                    // CC
     		            null,                    // BCC
     		            true,                   // isHTML
