@@ -1,0 +1,47 @@
+<div class="bg-blue step-one">
+<!-- Content of conclusion screen -->
+<ion-header-bar class="bar-header playstore-header"   align-title="center">
+<!-- <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+        <div class="inner-header">
+        <div class="buttons">
+           <button class="button icon ion-chevron-left" style="background-color:#F68B1F;color:white;" back></button>
+        </div>
+        <div class="inner-logo">
+        <img class="title" src="./img/header-blue.png">
+        </div>
+     <div class="buttons">
+          <button class="button icon ion-home" style="background-color:#F68B1F;color: white;" ui-sref="home"></button>
+        </div>
+        </div>
+</ion-header-bar>
+      <!-- end of ionic header bar -->
+
+<!-- Content of conclusion screen -->
+<ion-content>
+     <form class="first-form fm-section rating-section">
+   
+   <div class="form-group order-form">
+     <h3 class="text-center page-title">Rate Comment Send</h3>
+  <div class="row row-dblock">
+  <div class="col-md-12 col-sm-12 col-xs-12 v-field text-center">
+   <ionic-ratings ratingsobj='ratingsObject' index='$index'></ionic-ratings>
+   <p class="w-para">Press Star To Rate</p>
+  </div>
+  
+
+
+
+    <div class="col-md-12 col-sm-12 col-xs-12 p-t5">
+    <label class="p-0 w-para">Comment</label>
+    <textarea ng-model="suggestionComment" ng-change="suggestionSet(suggestionComment);" placeholder="Enter text here...">
+    </textarea>
+  </div>
+  </div>
+  </form>
+
+<div class="form-group skp-btn m-t20" align="center">
+  <button class="nex-btn btn-big-width" title="Press to send order & comments via email" ng-click="sendEmail();">Press to send order &amp; comments via email</button>
+ </div>
+</ion-content>
+</div>

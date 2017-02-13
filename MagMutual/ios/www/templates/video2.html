@@ -1,0 +1,31 @@
+<!--  Header of Video screen -->
+<div class="bg-blue step-one">
+<ion-header-bar class="bar-header playstore-header" align-title="center">
+               
+        <img class="title" src="./img/header-blue.png">
+        
+     <div class="buttons video-home-btn">
+          <button class="button icon ion-home" style="background-color:#F68B1F;color: white;" ui-sref="home"></button>
+          
+        </div>
+</ion-header-bar>
+      <!-- end of ionic header bar -->
+   
+<!--    Video player of Video screen -->
+   <ion-content scroll="false" ng-click="playPause();">
+
+
+  <video autobuffer controls autoplay  id="myVideo" width="100%" height="50%" controls>
+  <source id="mp4" src="video/shoulder_dystocia.mp4" type="video/mp4">
+  </video>
+
+
+
+
+</ion-content>
+</div>
+
+
+
+
+

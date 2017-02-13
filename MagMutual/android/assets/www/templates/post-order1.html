@@ -1,0 +1,208 @@
+<ion-header-bar class="bar-header playstore-header"   align-title="center">
+<!-- <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js">
+    </script>
+    <link href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+        <div class="inner-header">
+        <div class="buttons">
+           <button class="button icon ion-chevron-left" style="background-color:#F68B1F;color:white;" back></button>
+        </div>
+        <div class="inner-logo">
+        <img class="title" src="./img/header-blue.png">
+        </div>
+     <div class="buttons">
+          <button class="button icon ion-home" style="background-color:#F68B1F;color: white;" ui-sref="home"></button>
+        </div>
+        </div>
+</ion-header-bar>
+
+<!-- <ion-view cache-view="false" class="register-bg">  -->
+
+<ion-content has-bouncing="false">
+<form name="registerForm" align="center" novalidate="" class="form-horizontal">
+	<div class="container-fluid p-l0 p-r0">
+		<div class="row row-dblock">
+			<div class="col-md-12 col-sm-12 col-xs-12 form-view-left-bg">
+				<div class="form-view-left information-section">
+					<h3 class="text-center page-title">Shipping Information</h3>
+					<div class="list">
+					   <div class="form-group">
+						<label class="col-xs-4"> <span>Name:</span></label>
+						<div class="col-xs-8">
+						<input type="text"
+							name="full_name" placeholder="Name" 
+							allow-pattern="(\W|[a-z])" ng-model="register.user_name"
+							ng-minlength="2" ng-pattern="/^[a-zA-Z0-9 _]*$/" required>
+
+							<div ng-show="registerForm.full_name.$error.required && submitted">
+							<div style="color: red" class="text-left">Name is required</div>
+						</div>
+
+						<div ng-show="registerForm.full_name.$error.pattern && submitted">
+							<div style="color: red" class="text-left">Please enter valid Name</div>
+						</div>
+
+						<div
+							ng-show="!registerForm.full_name.$error.required && !registerForm.full_name.$error.pattern &&registerForm.full_name.$error.minlength && registerForm.full_name.$dirty && submitted">
+							<div style="color: red" class="text-left">Name must contain at least 2 characters</div>
+						</div>
+						</div>
+					 </div>
+						
+						<div class="form-group">
+							<label class="col-xs-4"> <span>Company:</span></label> 
+							<div class="col-xs-8"><input type="text"
+							name="company" placeholder="Company Name"
+							ng-model="register.company_name" ng-minlength="2"
+							ng-pattern="/^[a-zA-Z0-9 _]*$/" required>
+
+							<div ng-show="registerForm.company.$error.required && submitted">
+							<div style="color: red" class="text-left">Company Name is required</div>
+						</div>
+
+						<div ng-show="registerForm.company.$error.pattern && submitted">
+							<div style="color: red" class="text-left">Please enter valid Company Name</div>
+						</div>
+
+						<div
+							ng-show="!registerForm.company.$error.required && !registerForm.company.$error.pattern &&registerForm.company.$error.minlength && registerForm.company.$dirty && submitted">
+							<div style="color: red" class="text-left">Company Name must contain at least 2 characters</div>
+						</div>
+							</div>
+						</div>
+						
+
+						<div class="form-group">
+						<label class="col-xs-4"> <span>Address 1:</span></label>
+						<div class="col-xs-8"><input type="text"
+							name="address1" placeholder="Address 1"
+							ng-model="register.address" ng-minlength="2"
+							ng-pattern="/^[a-zA-Z0-9 _]*$/" required>
+
+							<div ng-show="registerForm.address1.$error.required && submitted">
+							<div style="color: red" class="text-left">Address is required</div>
+						</div>
+
+						<div ng-show="registerForm.address1.$error.pattern && submitted">
+							<div style="color: red" class="text-left">Please enter valid Address</div>
+						</div>
+
+						<div
+							ng-show="!registerForm.address1.$error.required && !registerForm.address1.$error.pattern && registerForm.address1.$error.minlength && registerForm.address1.$dirty && submitted">
+							<div style="color: red" class="text-left">Address must contain at least 2 characters</div>
+						</div>
+
+							</div>
+						</div>
+
+						
+						<div class="form-group">
+
+						<label class="col-xs-4"> <span>Address 2:</span></label> 
+						<div class="col-xs-8"><input type="text" ng-model="register.address1"
+							name="address2" placeholder="Address 2"></div>
+						
+						</div>
+						<div class="form-group">
+                        <label class="col-xs-4"> <span>City:</span></label> 
+                        <div class="col-xs-8"><input type="text"
+							name="city" placeholder="City"
+							allow-pattern="(\W|[a-z])" ng-model="register.city"
+							ng-minlength="2" ng-pattern="/^[a-zA-Z]*$/" required>
+
+							<div ng-show="registerForm.city.$error.required && submitted">
+							<div style="color: red" class="text-left">City Name is required</div>
+						</div>
+
+						<div ng-show="registerForm.city.$error.pattern && submitted">
+							<div style="color: red" class="text-left">Please enter valid City Name</div>
+						</div>
+
+						<div
+							ng-show="!registerForm.city.$error.required && !registerForm.city.$error.pattern && registerForm.city.$error.minlength && registerForm.city.$dirty && submitted">
+							<div style="color: red" class="text-left">City Name must contain at least 2 characters</div>
+						</div>
+
+						</div>
+						</div>
+						
+						<div class="form-group">
+						   <label class="col-xs-4"> <span>State:</span></label> 
+						   <div class="col-xs-8"><input type="text"
+							name="state" placeholder="State"
+							allow-pattern="(\W|[a-z])" ng-model="register.state"
+							ng-minlength="2" ng-pattern="/^[a-zA-Z]*$/" required>
+
+							<div ng-show="registerForm.state.$error.required && submitted">
+							<div style="color: red" class="text-left">State Name is required</div>
+						</div>
+
+						<div ng-show="registerForm.state.$error.pattern && submitted">
+							<div style="color: red" class="text-left">Please enter valid State Name</div>
+						</div>
+
+						<div
+							ng-show="!registerForm.state.$error.required && !registerForm.state.$error.pattern && registerForm.state.$error.minlength && registerForm.state.$dirty && submitted">
+							<div style="color: red" class="text-left">State Name must contain at least 2 characters</div>
+						</div>
+
+						 </div>
+						</div>
+						
+						
+						<div class="form-group">
+						<label class="col-xs-4"> <span>ZIP:</span></label> 
+						<div class="col-xs-8"><input type="tel"
+							 placeholder="ZIP"
+							allow-pattern="\d" ng-model="register.zip"
+							name="zip" ng-minlength="1" required>
+
+						 <div ng-show="registerForm.zip.$error.required && submitted">
+							<div style="color: red" class="text-left">ZIP is required</div>
+						</div>
+
+						<div
+							ng-show="registerForm.zip.$error.pattern && !registerForm.zip.$error.required && registerForm.zip.$error.minlength && registerForm.zip.$dirty && submitted">
+							<div style="color: red" class="text-left">ZIP must contain minimum 4 digits</div>
+						</div>
+						</div>
+						</div>
+						
+						
+						<div class="form-group">
+						<label class="col-xs-4"> <span>Phone:</span></label>
+						<div class="col-xs-8"><input type="tel"
+							 placeholder="Phone"
+							allow-pattern="\d" ng-model="register.phone"
+							name="phone" ng-minlength="1"  required>
+
+							<div ng-show="registerForm.phone.$error.required && submitted">
+							<div style="color: red" class="text-left">Phone Number is required</div>
+						</div>
+
+						<div
+							ng-show="registerForm.phone.$error.pattern && !registerForm.phone.$error.required && registerForm.phone.$error.minlength && registerForm.phone.$dirty && submitted">
+							<div style="color: red" class="text-left">Phone Number must contain minimum 1 digits</div>
+						</div>
+						</div>
+						</div>
+						
+						
+
+
+				
+				<!-- !--Button--> 
+						<div align="center" class="form-group m-t20">
+								<button class="nex-btn" type="submit"
+									on-tap="submitted=true;userDetails(registerForm.$valid);"
+									title="Continue">Continue</button>
+								<div class="clearfix"></div>
+						</div>	
+						<!--/button-->													
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</form>
+</ion-content> 

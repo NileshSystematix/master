@@ -1,0 +1,18 @@
+h1 {
+  font-family:'Geomanist','sans-serif';
+}
+
+p.sansserif {
+    font-family: 'Geomanist','sans-serif';
+}
+
+.backbtn-header{
+	background-color:#F68B1F;
+	color:white;
+}
+.inner-header .inner-logo{width: 100%;margin: 0 auto;}
+.inner-header .inner-logo img{ left: 0 !important; right: 0 !important; margin: 0 auto;}
+
+.mt-5{
+margin-top: 15px;
+}

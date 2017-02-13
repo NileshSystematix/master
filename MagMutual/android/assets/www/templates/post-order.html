@@ -1,0 +1,55 @@
+
+<!-- Content of conclusion screen -->
+<ion-header-bar class="bar-header playstore-header"   align-title="center">
+<!-- <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+        <div class="inner-header">
+        <div class="buttons">
+           <button class="button icon ion-chevron-left" style="background-color:#F68B1F;color:white;" back></button>
+        </div>
+        <div class="inner-logo">
+        <img class="title" src="./img/header-blue.png">
+        </div>
+     <div class="buttons">
+          <button class="button icon ion-home" style="background-color:#F68B1F;color: white;" ui-sref="home"></button>
+        </div>
+        </div>
+</ion-header-bar>
+      <!-- end of ionic header bar -->
+
+<!-- Content of conclusion screen -->
+<ion-content>
+     <form name="registerForm" class="first-form fm-section order-section">
+   <h3 class="text-center page-title">Order Poster</h3>
+   <div class="form-group order-form">
+  <div class="row row-dblock">
+  <div class="col-md-12 col-sm-12 col-xs-12 v-field text-center">
+   <img src="img/checklist.jpg" alt="checklist"> 
+  </div>
+  <div class="col-md-12 col-sm-12 col-xs-12 v-field text-center">
+    <label class="p-tlabel">8" X 11"</label><input type="tel"  name="orderSize1" readonly="readonly" class="order-field" ng-model="order.size1" maxlength="1"/>
+     
+     <div class="clr"></div> 
+     <label class="p-tlabel">11" X 17"</label><input type="tel" name="orderSize2"  readonly="readonly" class="order-field" placeholder="Qty"  ng-model="order.size2" maxlength="1"/>
+    <div class="clr"></div> 
+     <label class="p-tlabel">18" X 24"</label><input type="tel" name="orderSize3" readonly="readonly"  class="order-field" placeholder="Qty"  ng-model="order.size3" maxlength="1"/>
+ </div>
+
+      <div class="col-md-12">
+          <p class="text-center n-text "><b>Note: </b>Contact us for additional posters</p>
+      </div>
+
+   <div class="col-md-12 col-sm-12 col-xs-12 v-field clr place-btn">
+   <button class="nex-btn btn-big-width"  ng-click="orderPoster2();">Continue</button>
+   </div><div class="clearfix"></div>
+   <div class="col-md-12">
+     <p class="text-center n-text"><b>Note: </b>Contact us if you would like more than one of each size</p>
+   </div>
+   </div>
+  </div>
+  </form>
+
+<!-- <div class="form-group skp-btn m-t20" align="center">
+  <button class="nex-btn btn-big-width" ng-click="rating();">Skip</button>  
+ </div> -->
+</ion-content>
