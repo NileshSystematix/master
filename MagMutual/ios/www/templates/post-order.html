@@ -20,36 +20,36 @@
 
 <!-- Content of conclusion screen -->
 <ion-content>
-     <form name="registerForm" class="first-form fm-section order-section">
-   <h3 class="text-center page-title">Order Poster</h3>
-   <div class="form-group order-form">
-  <div class="row row-dblock">
-  <div class="col-md-12 col-sm-12 col-xs-12 v-field text-center">
-   <img src="img/checklist.jpg" alt="checklist"> 
-  </div>
-  <div class="col-md-12 col-sm-12 col-xs-12 v-field text-center">
-    <label class="p-tlabel">8" X 11"</label><input type="tel" name="orderSize1" readonly="readonly" class="order-field" placeholder="Qty" ng-model="order.size1" maxlength="1"/>
-     
-     <div class="clr"></div> 
-     <label class="p-tlabel">11" X 17"</label><input type="tel" name="orderSize2" readonly="readonly" class="order-field" placeholder="Qty"  ng-model="order.size2" maxlength="1"/>
-    <div class="clr"></div> 
-     <label class="p-tlabel">18" X 24"</label><input type="tel" name="orderSize3" readonly="readonly" class="order-field" placeholder="Qty"  ng-model="order.size3" maxlength="1"/>
- </div>
-  <div class="col-md-12 col-sm-12 col-xs-12">
-      <p class="text-center n-text "><b>Note: </b>Contact us for additional posters</p>
-  </div>
-   <div class="col-md-12 col-sm-12 col-xs-12 v-field place-btn">
-   <button  class="nex-btn btn-big-width" ng-click="orderPoster2();">Continue</button>
-   </div>
-   <div class="clr"></div>
-   <div class="col-md-12">
-     <p class="text-center"><b>Note: </b>Contact us if you would like more than one of each size</p>
-   </div>
-   </div>
-  </div>
-  </form>
-
-<!-- <div class="form-group skp-btn m-t20" align="center">
+    <form name="registerForm" class="first-form fm-section order-section">
+        <!-- <select ng-model="poster.selectedValue1" name="orderSize1" class="order-field" ><option value="volvo">Volvo</option> <option value="volvo">Volvo</option></select> -->
+        <h3 class="text-center page-title">Order Poster</h3>
+        <div class="form-group order-form">
+            <div class="row row-dblock">
+                <div class="col-md-12 col-sm-12 col-xs-12 v-field text-center">
+                    <img src="img/checklist.jpg" alt="checklist">
+                        </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 v-field text-center">
+                    <label class="p-tlabel">8" X 11"</label><span><select ng-model="poster.selectedValue1" class="order-field" ng-options="orderSize for orderSize in quantity"></select></span>
+                    <div class="clr"></div>
+                    <label class="p-tlabel">11" X 17"</label><span><select ng-model="poster.selectedValue2" class="order-field" ng-options="orderSize for orderSize in quantity"></select></span>
+                    <div class="clr"></div>
+                    <label class="p-tlabel">18" X 24"</label><span><select ng-model="poster.selectedValue3" class="order-field" ng-options="orderSize for orderSize in quantity"></select></span>
+                </div><div class="clearfix"></div>
+                <div class="col-md-12">
+                    <p class="text-center n-text "><b>Note: </b>Contact us for additional posters</p>
+                </div>
+                
+                <div class="col-md-12 col-sm-12 col-xs-12 v-field clr place-btn">
+                    <button class="nex-btn btn-big-width"  ng-click="orderPoster2();">Continue</button>
+                </div><div class="clearfix"></div>
+                <div class="col-md-12">
+                    <p class="text-center n-text"><b>Note: </b>Contact us if you would like more than one of each size</p>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <!-- <div class="form-group skp-btn m-t20" align="center">
   <button class="nex-btn btn-big-width" ng-click="rating();">Skip</button>  
  </div> -->
 </ion-content>

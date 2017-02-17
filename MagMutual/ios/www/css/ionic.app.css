@@ -2650,7 +2650,7 @@ visibility:visible;}
 	.m-t20{margin-top:20px;}
 	.m-l8{margin-left: 8px !important;}
 	.m-b10{margin-bottom:10px !important;}
-	.bg-gry{background:#bbbdbf;border-radius:0px;color:#FFFFFF;padding:20px 10px;width:100%; min-height:350px;}
+	.bg-gry{background:#bbbdbf;border-radius:0px;color:#FFFFFF;padding:10px 10px;width:100%; /*min-height:350px;*/}
 .bg-blue{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0080ff+0,0181fe+14,0582ff+14,0383ff+15,0682ff+15,0383fe+15,0a84ff+18,0987ff+20,0c89ff+20,128bff+23,0f8bff+23,148bff+24,108eff+25,148cfd+25,1690ff+27,198eff+28,1890fe+29,1c92ff+30,1c90fd+30,1a93fe+31,2295ff+34,2196ff+35,2798fe+37,2498ff+38,299aff+39,289afd+40,2ea0ff+44,32a0ff+44,3aa6ff+52,3ca9fe+52,3ba7ff+53,3daaff+53,41a9fe+55,42adff+56,42aaff+57,43aefe+58,47adff+58,44adfe+59,48adff+59,45b0fe+59,49aeff+60,4cb1ff+62,4aaffd+63,4db3fe+63,4cb1ff+64,4fb5ff+66,52b4ff+66,51b7ff+68,56b8ff+69,54b6ff+69,57bafe+69,55b7fe+70,58bbff+70,5bbdfe+73,5fbcff+74,67c6ff+82,6ec7ff+85,70cafe+87,6eccff+88,73caff+88,74cffe+91,78ceff+93,7cd0ff+93,79d1ff+94,7dd1ff+95,7cd3ff+96,81d4ff+97,81d4ff+97,7ed5ff+98,81d4fe+98,82d7fe+99,85d4ff+99,82d5ff+100,83d5fb+100 */
     background: #0080ff; /* Old browsers */
     background: -moz-linear-gradient(top, #0080ff 0%, #0181fe 14%, #0582ff 14%, #0383ff 15%, #0682ff 15%, #0383fe 15%, #0a84ff 18%, #0987ff 20%, #0c89ff 20%, #128bff 23%, #0f8bff 23%, #148bff 24%, #108eff 25%, #148cfd 25%, #1690ff 27%, #198eff 28%, #1890fe 29%, #1c92ff 30%, #1c90fd 30%, #1a93fe 31%, #2295ff 34%, #2196ff 35%, #2798fe 37%, #2498ff 38%, #299aff 39%, #289afd 40%, #2ea0ff 44%, #32a0ff 44%, #3aa6ff 52%, #3ca9fe 52%, #3ba7ff 53%, #3daaff 53%, #41a9fe 55%, #42adff 56%, #42aaff 57%, #43aefe 58%, #47adff 58%, #44adfe 59%, #48adff 59%, #45b0fe 59%, #49aeff 60%, #4cb1ff 62%, #4aaffd 63%, #4db3fe 63%, #4cb1ff 64%, #4fb5ff 66%, #52b4ff 66%, #51b7ff 68%, #56b8ff 69%, #54b6ff 69%, #57bafe 69%, #55b7fe 70%, #58bbff 70%, #5bbdfe 73%, #5fbcff 74%, #67c6ff 82%, #6ec7ff 85%, #70cafe 87%, #6eccff 88%, #73caff 88%, #74cffe 91%, #78ceff 93%, #7cd0ff 93%, #79d1ff 94%, #7dd1ff 95%, #7cd3ff 96%, #81d4ff 97%, #81d4ff 97%, #7ed5ff 98%, #81d4fe 98%, #82d7fe 99%, #85d4ff 99%, #82d5ff 100%, #83d5fb 100%); /* FF3.6-15 */
@@ -2705,7 +2705,7 @@ visibility:visible;}
 	.input-field input[type="text"]{max-width:221px;width:100%;}
 	.fm-section .item.item-input span{display: inline-block; margin-right: 10px;}
 	label.text-right{color:#fff;}
-    .p-tlabel{font-size:16px !important;color: #fff; margin-right: 10px;  width: 26%;  margin-bottom: 10px; }
+    .p-tlabel{font-size:16px !important;color: #fff; margin-right: 10px;  width: 80px;  margin-bottom: 10px; }
 	/*New Changes*/
 .form-horizontal .list{padding:15px 10px;}
 .form-horizontal .list .form-group{margin-bottom:10px;}
@@ -2741,3 +2741,7 @@ box-shadow:         2px 2px 1px 0px rgba(50, 50, 50, 0.75);}
 .information-section .page-title{margin-top:20px;}
 .w-para{color:#fff;}
 .form-group h4{color: #000;font-size: 20px;}
+.form-group.p-l10 > h4:first-child{margin-top: 0;}
+.order-form .v-field select{width: auto;min-width:75px; padding:3px 5px; color:#000; background: #fff}
+/*select {-webkit-appearance: none; -moz-appearance: none; appearance: none; background:#fff url('../img/green_download_arrow.jpg')  no-repeat;background-position:95% 6px; background-size: 13px 13px; width: 40px; height: 20px; margin-left: 4px;}*/
+

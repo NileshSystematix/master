@@ -212,9 +212,10 @@ function DoSomething() {
     	 $scope.post={};
     	 
     	 $scope.order={};
-    	 $scope.order.size1="0";
-    	 $scope.order.size2="0";
-    	 $scope.order.size3="0";
+    	  $scope.poster.selectedValue1="0";
+          $scope.poster.selectedValue2="0";
+          $scope.poster.selectedValue3="0";
+        	$scope.quantity = ["0", "1"];
     	 
     	
     	 $scope.setValue=function(data){
@@ -224,12 +225,9 @@ function DoSomething() {
     	 }
       $scope.orderPoster2 = function () {
     	 
-     	window.localStorage.setItem( 'size1', $scope.order.size1);
-     	window.localStorage.setItem( 'size2', $scope.order.size2);
-     	window.localStorage.setItem( 'size3', $scope.order.size3);
-//     	 alert(window.localStorage.getItem( 'size1'));
-//     	 alert(window.localStorage.getItem( 'size2'));
-//    	alert(window.localStorage.getItem( 'size3'));
+     	window.localStorage.setItem( 'size1', $scope.poster.selectedValue1);
+       	window.localStorage.setItem( 'size2', $scope.poster.selectedValue2);
+       	window.localStorage.setItem( 'size3', $scope.poster.selectedValue3);
     	 $state.go('orderPoster2')
     	 
     
