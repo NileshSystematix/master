@@ -2753,7 +2753,7 @@ visibility:visible;}
 	
 	html body .form-group label.checkbox-label input[type="checkbox"], 
 	.step-two .form-group label.checkbox-label input[type="checkbox"]{
-    margin: 3px 0px 4px 0;}
+    margin: 4px 0px 4px 0;}
 .maneuvers-wrapper .form-group label input[type="checkbox"],
 .newborn-wrapper .form-group label.checkbox-label input[type="checkbox"]{position: relative;
     top: 2px;}

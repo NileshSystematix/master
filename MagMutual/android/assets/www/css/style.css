@@ -16,3 +16,4 @@ p.sansserif {
 .mt-5{
 margin-top: 15px;
 }
+body .form-group input[type="checkbox"]{display: inline-block; position: relative; height: 17px; width: 17px; vertical-align: top; top: -1px !important; }
